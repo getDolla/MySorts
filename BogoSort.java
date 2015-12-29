@@ -34,11 +34,11 @@ public class BogoSort {
     }
     //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     
-    public static boolean isSorted( ArrayList<Comparable> data )
+    public static boolean isSorted( ArrayList<Comparable> data ) //checks if sorted
     {
 	for( int i = 0; i < data.size() - 1; i++ )
 	    {
-		if( data.get(i) > data.get(i+1) ) {
+		if( data.get(i).compareTo( data.get(i+1) ) > 0 ) { //if the element after is smaller
 		    return false;
 		}
 	    }
@@ -53,8 +53,8 @@ public class BogoSort {
 	while( !isSorted(data) ) {
 	    for( int n = 0; n < data.size(); n++ )
 		{
-		    int temp = (int) (Math.random() * data.size);
-		    data.set( n, data.set( temp, data.get(n) ) );
+		    int temp = (int) (Math.random() * data.size());
+		    data.set( n, data.set( temp, data.get(n) ) ); //shuffle
 		}
 	}
     }
@@ -73,8 +73,8 @@ public class BogoSort {
     	while( !isSorted(data) ) {
 	    for( int n = 0; n < data.size(); n++ )
 		{
-		    int temp = (int) (Math.random() * data.size);
-		    data.set( n, data.set( temp, data.get(n) ) );
+		    int temp = (int) (Math.random() * data.size());
+		    data.set( n, data.set( temp, data.get(n) ) ); //shuffle
 		}
 	}
 	
@@ -90,13 +90,13 @@ public class BogoSort {
       glen.add(12);
       glen.add(3);
       System.out.println( "ArrayList glen before sorting:\n" + glen );
-      selectionSortV(glen);
+      bogoSortV(glen);
       System.out.println( "ArrayList glen after sorting:\n" + glen );
     
 
       ArrayList coco = populate( 10, 1, 1000 );
       System.out.println( "ArrayList coco before sorting:\n" + coco );
-      selectionSortV(coco);
+      bogoSortV(coco);
       System.out.println( "ArrayList coco after sorting:\n" + coco );
 
 
