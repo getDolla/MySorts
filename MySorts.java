@@ -6,7 +6,7 @@ APCS1 pd9
 
 import java.util.ArrayList;
 
-//This programs gets the average runtime of 
+//This programs gets the average runtime of Bogo sort, Bubble sort, and Selection sort.
 public class MySorts {
 	//~~~~~~~~~~~~~~~~~~~ HELPER METHODS ~~~~~~~~~~~~~~~~~~~
     //precond: lo < hi && size > 0
