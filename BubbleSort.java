@@ -53,7 +53,7 @@ public class BubbleSort {
             int c = data.get(i).compareTo( data.get(i+1) );
             if( c > 0 ) { //if the next value is smaller
                 data.set( i, data.set( i + 1, data.get(i) ) );//swap
-                System.out.println( data );
+                //System.out.println( data );
             }              
             }
         }
@@ -76,7 +76,7 @@ public class BubbleSort {
                 int c = data.get(i).compareTo( data.get(i+1) );
                 if( c > 0 ) { //if next value is smaller
                     data.set( i, data.set( i + 1, data.get(i) ) ); //swap
-                    System.out.println( data );
+                    //System.out.println( data );
                 }
             }
         }
